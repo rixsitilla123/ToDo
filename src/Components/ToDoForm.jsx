@@ -1,5 +1,7 @@
-import React from 'react';
-function ToDoForm({ todo, setTodo }) {
+import React, { useContext } from 'react';
+import { Context } from '../context/todoContext';
+function ToDoForm() {
+	const {todo, setTodo} = useContext(Context)
 	function handleSubmitForm(event) {
 		event.preventDefault()
 		const data = {
